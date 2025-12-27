@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Notice | Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .card {
+            border-radius: 12px;
+        }
+
+        .info-text {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar for Context -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- ===== SIDEBAR ===== -->
+            <div class="col-md-2 sidebar p-0">
+                <a href="home.html" class="brand">
+                    <img src="/static/logo.png" class="me-2"
+                        style="height: 30px; vertical-align: text-bottom;">
+                    Ayesha Welfare & Charitable Trust
+                </a>
+
+                <div class="d-flex flex-column">
+                    <a href="admin_dashboard.html" class="sidebar-link">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a href="donor_list.html" class="sidebar-link">
+                        <i class="bi bi-people"></i> Donor List
+                    </a>
+                    <a href="student_list.html" class="sidebar-link">
+                        <i class="bi bi-file-earmark-text"></i> Applications
+                    </a>
+                    <a href="add_notice.html" class="sidebar-link active">
+                        <i class="bi bi-megaphone"></i> Add Notice
+                    </a>
+                    <a href="add_shorts.html" class="sidebar-link">
+                        <i class="bi bi-youtube"></i> Add Shorts
+                    </a>
+                    <hr class="border-secondary mx-3">
+                    <a href="login.html" class="sidebar-link text-danger">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="col-md-10 p-4">
+                <h3 class="mb-4">Add / Update Notice</h3>
+
+                <div class="card p-4">
+                    <form>
+
+                        <div class="mb-3">
+                            <label class="form-label">Notice Title</label>
+                            <input type="text" class="form-control"
+                                placeholder="e.g. Applications for 2025 are now open">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Notice Message</label>
+                            <textarea class="form-control" rows="4"
+                                placeholder="Enter notice content that will be displayed on the home page"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Notice Status</label>
+                            <select class="form-select">
+                                <option selected>Active</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+
+                        <p class="info-text">
+                            ⚠ Only one active notice will be shown on the home page at a time.
+                        </p>
+
+                        <div class="mt-4">
+                            <button type="button" class="btn btn-success me-2">
+                                Save Notice
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                Clear
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Donate | Aaysha Trust</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="home.html">
+                <img src="/static/logo.png" alt="Aaysha Trust">
+                <span class="ms-2">Ayesha Welfare & Charitable Trust</span>
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="details.html">Transparency</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculator.html">Zakat Calculator</a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-success ms-2" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5" style="margin-top: 160px !important;">
+        <h2 class="text-center mb-3">Donate for Education (Zakat)</h2>
+        <p class="text-center text-muted">
+            Your Zakat will be used strictly for verified educational assistance.
+        </p>
+
+        <div class="card p-4 mx-auto" style="max-width: 650px;">
+            <form>
+
+                <!-- ===== DONATION AMOUNT ===== -->
+                <h5 class="mb-3">Donation Amount (₹)</h5>
+
+                <div class="mb-3">
+                    <button type="button" class="btn btn-outline-success amount-btn"
+                        onclick="setAmount(500)">₹500</button>
+                    <button type="button" class="btn btn-outline-success amount-btn"
+                        onclick="setAmount(1000)">₹1,000</button>
+                    <button type="button" class="btn btn-outline-success amount-btn"
+                        onclick="setAmount(2500)">₹2,500</button>
+                    <button type="button" class="btn btn-outline-success amount-btn"
+                        onclick="setAmount(5000)">₹5,000</button>
+                </div>
+
+                <input type="number" id="amount" class="form-control mb-3" placeholder="Enter custom amount (Min ₹50)"
+                    min="50">
+
+                <!-- ===== DONOR DETAILS ===== -->
+                <h5 class="mb-3">Donor Details</h5>
+
+                <div class="mb-3">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name">
+                </div>
+
+                <div class="mb-3">
+                    <label>Email ID</label>
+                    <input type="email" class="form-control" placeholder="Email (optional)">
+                </div>
+
+                <div class="mb-3">
+                    <label>Mobile Number</label>
+                    <input type="text" class="form-control" placeholder="Mobile number">
+                </div>
+
+                <div class="mb-3">
+                    <label>PAN Card Number (Optional – for 80G receipt)</label>
+                    <input type="text" class="form-control" placeholder="ABCDE1234F">
+                </div>
+
+                <!-- ===== ZAKAT DECLARATION ===== -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="zakatCheck">
+                    <label class="form-check-label" for="zakatCheck">
+                        I intend this donation as <strong>Zakat</strong> and confirm it is given willingly.
+                    </label>
+                </div>
+
+                <p class="info-text">
+                    ℹ You will receive a payment receipt and 80G receipt (if applicable) after successful donation.
+                </p>
+
+                <!-- ===== DONATE BUTTON ===== -->
+                <div class="d-grid mt-4">
+                    <button type="button" class="btn btn-success btn-lg">
+                        Donate Now
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p class="mb-0">© 2025 Aaysha Trust | Secure & Transparent Donations</p>
+    </footer>
+
+    <script>
+        function setAmount(value) {
+            document.getElementById("amount").value = value;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

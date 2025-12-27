@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile | Aaysha Trust</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .card {
+            border-radius: 12px;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar for Context -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- ===== SIDEBAR ===== -->
+            <div class="col-md-2 sidebar p-0">
+                <a href="home.html" class="brand">
+                    <img src="/static/logo.png" class="me-2"
+                        style="height: 30px; vertical-align: text-bottom;">
+                    Ayesha Welfare & Charitable Trust
+                </a>
+
+                <div class="d-flex flex-column">
+                    <a href="user_dashboard.html" class="sidebar-link">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a href="raise_cause.html" class="sidebar-link">
+                        <i class="bi bi-plus-circle"></i> Raise a Cause
+                    </a>
+                    <a href="my_causes.html" class="sidebar-link">
+                        <i class="bi bi-list-check"></i> My Causes
+                    </a>
+                    <a href="my_donations.html" class="sidebar-link">
+                        <i class="bi bi-heart"></i> My Donations
+                    </a>
+                    <a href="profile.html" class="sidebar-link active">
+                        <i class="bi bi-person"></i> My Profile
+                    </a>
+                    <hr class="border-secondary mx-3">
+                    <a href="login.html" class="sidebar-link text-danger">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="col-md-10 p-4">
+                <h3 class="mb-4">My Profile</h3>
+
+                <div class="card p-4">
+                    <form>
+
+                        <h5 class="section-title">Personal Details</h5>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control" value="Mohammed Ali">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Email ID</label>
+                                <input type="email" class="form-control" value="user@email.com">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Mobile Number</label>
+                                <input type="text" class="form-control" value="9XXXXXXXXX">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Date of Birth</label>
+                                <input type="date" class="form-control">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Gender</label>
+                                <select class="form-select">
+                                    <option selected>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Marital Status</label>
+                                <select class="form-select">
+                                    <option>Single</option>
+                                    <option>Married</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h5 class="section-title">Address Details</h5>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>State</label>
+                                <input type="text" class="form-control" value="Maharashtra">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>District</label>
+                                <input type="text" class="form-control" value="Pune">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Pin Code</label>
+                                <input type="text" class="form-control" value="411001">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Address</label>
+                                <textarea class="form-control" rows="2">Full address here</textarea>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h5 class="section-title">Tax Information (Optional)</h5>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>PAN Card Number</label>
+                                <input type="text" class="form-control" placeholder="Optional – for 80G receipt">
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-success btn-lg">
+                                Update Profile
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

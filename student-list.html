@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Applications | Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .status {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .interview {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .approved {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar for Context -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- ===== SIDEBAR ===== -->
+            <div class="col-md-2 sidebar p-0">
+                <a href="home.html" class="brand">
+                    <img src="/static/logo.png" class="me-2"
+                        style="height: 30px; vertical-align: text-bottom;">
+                    Ayesha Welfare & Charitable Trust
+                </a>
+
+                <div class="d-flex flex-column">
+                    <a href="admin_dashboard.html" class="sidebar-link">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a href="donor_list.html" class="sidebar-link">
+                        <i class="bi bi-people"></i> Donor List
+                    </a>
+                    <a href="student_list.html" class="sidebar-link active">
+                        <i class="bi bi-file-earmark-text"></i> Applications
+                    </a>
+                    <a href="add_notice.html" class="sidebar-link">
+                        <i class="bi bi-megaphone"></i> Add Notice
+                    </a>
+                    <a href="add_shorts.html" class="sidebar-link">
+                        <i class="bi bi-youtube"></i> Add Shorts
+                    </a>
+                    <hr class="border-secondary mx-3">
+                    <a href="login.html" class="sidebar-link text-danger">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="col-md-10 p-4">
+                <h3 class="mb-4">Student Applications</h3>
+
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Student Name</th>
+                                    <th>Course</th>
+                                    <th>Institute</th>
+                                    <th>Amount Requested (₹)</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mohammed Ali</td>
+                                    <td>B.Tech (Sem 3)</td>
+                                    <td>ABC Engineering College</td>
+                                    <td>75,000</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>
+                                        <a href="student_view.html" class="btn btn-sm btn-primary">
+                                            View
+                                        </a>
+                                        <button class="btn btn-sm btn-warning">
+                                            Invite Interview
+                                        </button>
+                                        <button class="btn btn-sm btn-danger">
+                                            Reject
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>Fatima Khan</td>
+                                    <td>HSC Science</td>
+                                    <td>Modern Junior College</td>
+                                    <td>20,000</td>
+                                    <td><span class="status interview">Interview</span></td>
+                                    <td>
+                                        <a href="student-view.html" class="btn btn-sm btn-primary">
+                                            View
+                                        </a>
+                                        <button class="btn btn-sm btn-success">
+                                            Approve
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>Ahmed Shaikh</td>
+                                    <td>Diploma Computer</td>
+                                    <td>XYZ Polytechnic</td>
+                                    <td>40,000</td>
+                                    <td><span class="status approved">Approved</span></td>
+                                    <td>
+                                        <a href="student-view.html" class="btn btn-sm btn-secondary">
+                                            View
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>Sana Patel</td>
+                                    <td>B.Com</td>
+                                    <td>City Commerce College</td>
+                                    <td>30,000</td>
+                                    <td><span class="status rejected">Rejected</span></td>
+                                    <td>
+                                        <a href="student-view.html" class="btn btn-sm btn-secondary">
+                                            View
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

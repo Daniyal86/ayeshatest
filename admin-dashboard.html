@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Aaysha Trust</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        /* Custom dashboard styles if any */
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- ===== SIDEBAR ===== -->
+            <div class="col-md-2 sidebar p-0">
+                <a href="home.html" class="brand">
+                    <img src="/static/logo.png" class="me-2"
+                        style="height: 30px; vertical-align: text-bottom;">
+                    Ayesha Welfare & Charitable Trust
+                </a>
+
+                <div class="d-flex flex-column">
+                    <a href="admin_dashboard.html" class="sidebar-link active">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a href="donor_list.html" class="sidebar-link">
+                        <i class="bi bi-people"></i> Donor List
+                    </a>
+                    <a href="student_list.html" class="sidebar-link">
+                        <i class="bi bi-file-earmark-text"></i> Applications
+                    </a>
+                    <a href="add_notice.html" class="sidebar-link">
+                        <i class="bi bi-megaphone"></i> Add Notice
+                    </a>
+                    <a href="add_shorts.html" class="sidebar-link">
+                        <i class="bi bi-youtube"></i> Add Shorts
+                    </a>
+                    <hr class="border-secondary mx-3">
+                    <a href="home.html" class="sidebar-link">
+                        <i class="bi bi-house"></i> Back to Home
+                    </a>
+                    <a href="login.html" class="sidebar-link text-danger">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="col-md-10 p-4">
+
+                <h3 class="mb-4">Welcome, Admin</h3>
+
+                <!-- ===== SUMMARY CARDS ===== -->
+                <div class="row g-4 mb-4">
+
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h6>Total Zakat Collected</h6>
+                            <h3>₹ 12,50,000</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h6>Total Donors</h6>
+                            <h3>320</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h6>Students Supported</h6>
+                            <h3>145</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h6>Pending Applications</h6>
+                            <h3>18</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ===== QUICK ACTIONS ===== -->
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <h5>Review Applications</h5>
+                            <p>Verify student documents, approve or reject Zakat requests.</p>
+                            <a href="student-list.html" class="btn btn-danger">
+                                View Applications
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <h5>Donor Records</h5>
+                            <p>View donor list with receipt numbers, dates, and amounts.</p>
+                            <a href="donor-list.html" class="btn btn-primary">
+                                View Donors
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <h5>Announcements</h5>
+                            <p>Add notices and YouTube shorts visible on the home page.</p>
+                            <a href="add-notice.html" class="btn btn-success">
+                                Manage Content
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

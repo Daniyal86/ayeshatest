@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard | Aaysha Trust</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .card h5 {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- ===== SIDEBAR ===== -->
+            <div class="col-md-2 sidebar p-0">
+                <a href="home.html" class="brand">
+                    <img src="/static/logo.png" class="me-2"
+                        style="height: 30px; vertical-align: text-bottom;">
+                    Ayesha Welfare & Charitable Trust
+                </a>
+
+                <div class="d-flex flex-column">
+                    <a href="user_dashboard.html" class="sidebar-link active">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a href="raise_cause.html" class="sidebar-link">
+                        <i class="bi bi-plus-circle"></i> Raise a Cause
+                    </a>
+                    <a href="my_causes.html" class="sidebar-link">
+                        <i class="bi bi-list-check"></i> My Causes
+                    </a>
+                    <a href="my_donations.html" class="sidebar-link">
+                        <i class="bi bi-heart"></i> My Donations
+                    </a>
+                    <a href="profile.html" class="sidebar-link">
+                        <i class="bi bi-person"></i> My Profile
+                    </a>
+                    <hr class="border-secondary mx-3">
+                    <a href="home.html" class="sidebar-link">
+                        <i class="bi bi-house"></i> Back to Home
+                    </a>
+                    <a href="login.html" class="sidebar-link text-danger">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="col-md-10 p-4">
+
+                <h3 class="mb-4">Welcome, User</h3>
+
+                <!-- ===== SUMMARY CARDS ===== -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h5>Causes Raised</h5>
+                            <h2>2</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h5>Donations Made</h5>
+                            <h2>₹5,000</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h5>Application Status</h5>
+                            <h2>Pending</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card p-3 text-center">
+                            <h5>Receipts</h5>
+                            <h2>3</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== ACTION CARDS ===== -->
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <h5>Raise a Cause</h5>
+                            <p>Apply for educational assistance by submitting required details.</p>
+                            <a href="raise-cause.html" class="btn btn-success">Raise Cause</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <h5>My Causes</h5>
+                            <p>View history and status of all causes you have applied for.</p>
+                            <a href="my-causes.html" class="btn btn-primary">View Causes</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <h5>My Donations</h5>
+                            <p>View donations made by you and download receipts.</p>
+                            <a href="my-donations.html" class="btn btn-warning text-white">View Donations</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

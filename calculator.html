@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zakat Calculator | Aaysha Trust</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .result-box {
+            background: #d4edda;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="home.html">
+                <img src="/static/logo.png" alt="Aaysha Trust">
+                <span class="ms-2">Ayesha Welfare & Charitable Trust</span>
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="details.html">Transparency</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculator.html">Zakat Calculator</a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-success ms-2" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5" style="margin-top: 160px !important;">
+        <h2 class="text-center mb-3">Zakat Calculator</h2>
+        <p class="text-center text-muted">
+            Simply enter your assets and we’ll calculate your Zakat (2.5%)
+        </p>
+
+        <div class="card p-4">
+            <h4 class="section-title">Enter Your Assets (₹)</h4>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Gold Value</label>
+                    <input type="number" id="gold" class="form-control" placeholder="Gold value in ₹">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Silver Value</label>
+                    <input type="number" id="silver" class="form-control" placeholder="Silver value in ₹">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Cash in Hand / Bank</label>
+                    <input type="number" id="cash" class="form-control" placeholder="Cash & bank balance">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Land / Property (if for sale)</label>
+                    <input type="number" id="property" class="form-control" placeholder="Property value">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Business / Investments / Shares</label>
+                    <input type="number" id="business" class="form-control" placeholder="Business & investments">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label>Agriculture / Animals</label>
+                    <input type="number" id="agriculture" class="form-control" placeholder="Agriculture / animals">
+                </div>
+            </div>
+
+            <button class="btn btn-success w-100" onclick="calculateZakat()">
+                Calculate Zakat
+            </button>
+
+            <div id="result" class="result-box d-none">
+                <h4>Your Zakat Amount</h4>
+                <h2>₹ <span id="zakatAmount">0</span></h2>
+                <p class="mt-2">2.5% of your eligible assets</p>
+                <a href="donate.html" class="btn btn-success mt-2">Donate This Amount</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p class="mb-0">© 2025 Aaysha Trust | Fulfill Your Zakat with Confidence</p>
+    </footer>
+
+    <script>
+        function calculateZakat() {
+            let gold = Number(document.getElementById("gold").value) || 0;
+            let silver = Number(document.getElementById("silver").value) || 0;
+            let cash = Number(document.getElementById("cash").value) || 0;
+            let property = Number(document.getElementById("property").value) || 0;
+            let business = Number(document.getElementById("business").value) || 0;
+            let agriculture = Number(document.getElementById("agriculture").value) || 0;
+
+            let totalAssets = gold + silver + cash + property + business + agriculture;
+            let zakat = totalAssets * 0.025;
+
+            document.getElementById("zakatAmount").innerText = zakat.toFixed(2);
+            document.getElementById("result").classList.remove("d-none");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

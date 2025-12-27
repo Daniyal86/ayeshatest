@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Causes | Aaysha Trust</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Global CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        .status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .approved {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .funded {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar for Context -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- ===== SIDEBAR ===== -->
+            <div class="col-md-2 sidebar p-0">
+                <a href="home.html" class="brand">
+                    <img src="/static/logo.png" class="me-2"
+                        style="height: 30px; vertical-align: text-bottom;">
+                    Ayesha Welfare & Charitable Trust
+                </a>
+
+                <div class="d-flex flex-column">
+                    <a href="user_dashboard.html" class="sidebar-link">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                    <a href="raise_cause.html" class="sidebar-link">
+                        <i class="bi bi-plus-circle"></i> Raise a Cause
+                    </a>
+                    <a href="my_causes.html" class="sidebar-link active">
+                        <i class="bi bi-list-check"></i> My Causes
+                    </a>
+                    <a href="my_donations.html" class="sidebar-link">
+                        <i class="bi bi-heart"></i> My Donations
+                    </a>
+                    <a href="profile.html" class="sidebar-link">
+                        <i class="bi bi-person"></i> My Profile
+                    </a>
+                    <hr class="border-secondary mx-3">
+                    <a href="login.html" class="sidebar-link text-danger">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="col-md-10 p-4">
+
+                <h3 class="mb-4">My Causes</h3>
+
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Cause Title</th>
+                                    <th>Institute</th>
+                                    <th>Amount Requested (₹)</th>
+                                    <th>Amount Collected (₹)</th>
+                                    <th>Status</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>B.Tech Fees – Semester 3</td>
+                                    <td>ABC Engineering College</td>
+                                    <td>75,000</td>
+                                    <td>25,000</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td><button class="btn btn-sm btn-primary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Diploma Computer Course</td>
+                                    <td>XYZ Polytechnic</td>
+                                    <td>40,000</td>
+                                    <td>40,000</td>
+                                    <td><span class="status funded">Funded</span></td>
+                                    <td><button class="btn btn-sm btn-primary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>HSC Science Fees</td>
+                                    <td>Modern Junior College</td>
+                                    <td>20,000</td>
+                                    <td>0</td>
+                                    <td><span class="status rejected">Rejected</span></td>
+                                    <td><button class="btn btn-sm btn-secondary" disabled>Details</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
